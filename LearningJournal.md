@@ -4,7 +4,7 @@
 
 - I've completed the Full Stack Web Development Immersion which covers MERN & MEAN Stack. 
   
-- Check out my portfolio at sam-my.com
+- Check out my portfolio at [sam-my.com](http://sam-my.com)
 
 - I've been in the mortgage/banking industry for 15+ years and am working on a transition to tech.
 
@@ -12,7 +12,7 @@
 
 - My communication & troubleshooting skills helped me learned how to code methodically and be able to internalize this programming learning experience in a relatable & simple way. 
 
-2.. What do you know about Python already? What do you want to know?
+2. What do you know about Python already? What do you want to know?
 
 - Not much outside that it is predominatly used in Machine Learning, Data Science & AI. 
 
@@ -21,7 +21,7 @@
 - I'm sure I'll get stuck with and troubleshoot just to find out something silly like I forgot to capitalize something or a trailing slash. 
 
 - Knowing that I have a mentor that I can reach out to is comforting
-- The internet, AI, checking forums, learning how to use the python version or techniques of console logging and debugging.   
+- The internet, AI, checking forums, learning how to use the python version/techniques of console logging and debugging.   
 
 # Exercise 1.1: Getting Started with Python 
 
@@ -30,7 +30,7 @@
 - Frontend is what the user sees visually on the web app: for example buttons, images, text, all the pages and forms etc. 
 
 - Backend is when the user enters info or requests/retrieve data like clicking a button or submitting a form. 
-   -  a. A process happens that either grabs the info from the server or delivers the info to the server so it can handle it and update/store it in the database as necessary: API. For example, loading a picture of a movie poster when the user clicks on an icon or link. 
+   -  a. A process happens that either grabs info from the server or delivers info to the server handling it to update/store it in the database as necessary: API. For example, loading a picture of a movie poster when the user clicks on an icon or link. 
   
    - b. This involves a security system that handles the user logging in or registering where the user has to be verified: Authentication. 
   
@@ -50,3 +50,66 @@
 - I want to put in practice what the programming & troubleshooting techniques I've learned so far to picking up Python. 
 
 - I want to position myself and use this as a stepping stone to better learn about AI and Machine Learning in the future.
+
+### Exercise 1.2: Data Types in Python
+
+#### Learning Goals
+
+- Explain variables and data types in Python
+- Summarize the use of objects in Python
+- Create a data structure for your Recipe app
+
+#### Reflection Questions
+
+1. **Imagine you’re having a conversation with a future colleague about whether to use the iPython Shell instead of Python’s default shell. What reasons would you give to explain the benefits of using the iPython Shell over the default one?**
+
+   **Answer:** 
+   - **Enhanced Interactivity:** IPython Shell offers an enhanced interactive environment compared to the default Python shell, making it easier to experiment and test code snippets.
+   - **Advanced Features:** IPython includes advanced features like tab completion, syntax highlighting, and magic commands that streamline workflow and increase productivity.
+   - **Better Debugging:** It provides better debugging tools with detailed tracebacks, which help in identifying and fixing errors quickly.
+   - **Rich Display Capabilities:** IPython can handle rich media like images, videos, and even interactive visualizations, which are beneficial for data analysis and scientific computing.
+   - **Integrated Documentation:** IPython allows easy access to documentation and help for functions and modules using commands like `?` and `??`.
+
+2. **Python has a host of different data types that allow you to store and organize information. List 4 examples of data types that Python recognizes, briefly define them, and indicate whether they are scalar or non-scalar.**
+
+   | Data type   | Definition                                                                 | Scalar or Non-Scalar |
+   |-------------|---------------------------------------------------------------------------|----------------------|
+   | **int**     | Represents whole numbers, e.g., 1, 2, 3                                  | Scalar               |
+   | **String**   | Charactes representing text, e.g., 'hello', 'world'                  | Non-Scalar               |
+   | **list**    | Ordered, mutable collection of elements, e.g., [1, 2, 3]                  | Non-Scalar           |
+   | **dict**    | Unordered collection of key-value pairs, e.g., {'name': 'Alice', 'age': 30}| Non-Scalar           |
+
+3. **A frequent question at job interviews for Python developers is: what is the difference between lists and tuples in Python? Write down how you would respond.**
+
+   **Answer:** 
+   Lists and tuples are both used to store collections of items in Python. The primary differences are:
+   - **Mutability:** Lists are mutable, meaning their elements can be changed after they are created. Tuples are immutable, so once they are created, their elements cannot be changed.
+   - **Syntax:** Lists are defined using square brackets, e.g., `[1, 2, 3]`, whereas tuples are defined using parentheses, e.g., `(1, 2, 3)`.
+   - **Use Cases:** Lists are suitable for collections of items that may change, such as a list of tasks or items in a cart. Tuples are suitable for collections of items that should remain constant, such as the coordinates of a point or a record of data.
+
+4. **In the task for this Exercise, you decided what you thought was the most suitable data structure for storing all the information for a recipe. Now, imagine you’re creating a language-learning app that helps users memorize vocabulary through flashcards. Users can input vocabulary words, definitions, and their category (noun, verb, etc.) into the flashcards. They can then quiz themselves by flipping through the flashcards. Think about the necessary data types and what would be the most suitable data structure for this language-learning app. Between tuples, lists, and dictionaries, which would you choose? Think about their respective advantages and limitations, and where flexibility might be useful if you were to continue developing the language-learning app beyond vocabulary memorization.**
+
+   **Answer:** 
+   For the language-learning app, a dictionary would be the most suitable data structure to store the flashcards. Each flashcard can be represented as a dictionary with keys for the word, definition, and category. This allows easy access and modification of each flashcard's attributes. The structure provides flexibility for future extensions, such as adding pronunciation, example sentences, or difficulty levels.
+
+   **Example:**
+   ```python
+   flashcard = {
+       'word': 'elucidate',
+       'definition': 'make (something) clear; explain',
+       'category': 'verb'
+   }
+
+   flashcards = [
+       {
+           'word': 'elucidate',
+           'definition': 'make (something) clear; explain',
+           'category': 'verb'
+       },
+       {
+           'word': 'gregarious',
+           'definition': 'fond of company; sociable',
+           'category': 'adjective'
+       }
+       
+   ]

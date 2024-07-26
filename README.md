@@ -1,73 +1,144 @@
 # Recipe App Command Line Version
 
 ## Objective
-Build the command line version of a Recipe app, which acts as a precursor to its web app counterpart in Achievement 2.
+Build a command line version of a Recipe app, which acts as a precursor to its web app counterpart in Achievement 2.
 
 ## Context
-Building a website with the Django web framework is almost entirely done in Python, and takes advantage of Python’s object-oriented nature. You may also be required to modify your code in the event of any updates to Django—here, it helps to understand the instructions and syntaxes provided. Debugging for errors and exceptions also becomes an easy task with the concepts outlined in this Achievement.
+Develop a command line version of a Recipe app, serving as a foundational step towards its web application counterpart in Achievement 2.
 
-This project primarily focuses on learning Python fundamentals, data structures, and object-oriented programming. You'll also learn how to interact with databases using Python, which will help you when you have to do the same with the Django framework. The project also aims to teach you standard programming practices that will make your code simpler, easier to read, and robust during execution.
+Creating a website with the Django web framework is predominantly done in Python, leveraging its object-oriented capabilities. Understanding Python's core concepts and syntax is crucial, especially when adapting to updates in Django. This project emphasizes Python fundamentals, data structures, and object-oriented programming, providing a solid base for interacting with databases using Python. These skills will be invaluable when transitioning to Django for web development. Additionally, the project aims to instill standard programming practices, ensuring your code is clean, readable, and robust.
 
 ## User Goals
-Your users should be able to create and modify recipes with ingredients, cooking time, and a difficulty parameter that would be automatically calculated by the app. Your users should also be able to search for recipes by their ingredients.
+Users should be able to effortlessly create and modify recipes, including details such as ingredients, cooking time, and an automatically calculated difficulty level. They should also be able to search for recipes based on ingredients.
 
 ## Key Features
-- Create and manage the user’s recipes on a locally hosted MySQL database.
-- Option to search for recipes that contain a set of ingredients specified by the user.
-- Automatically rate each recipe by their difficulty level.
-- Display more details on each recipe if the user prompts it, such as the ingredients, cooking time, and difficulty of the recipe.
+- Manage recipes on a locally hosted MySQL database.
+- Search for recipes containing specific ingredients.
+- Automatically assign a difficulty rating to each recipe.
+- Display detailed information about each recipe, including ingredients, cooking time, and difficulty level.
 
 ## Technical Requirements
-- The app should handle any common exceptions or errors that may pop up either during user input, database access, for example, and display user-friendly error messages.
-- The app must connect to a MySQL database hosted locally on your system.
-- The app must provide an easy-to-use interface, supported by simple forms of input and concise instructions that any user can follow—always assume that they aren’t as technically proficient as you may be. For instance, if the program requires that the user picks an option from a list, instead of having them manually type in the option, list the options with numbers, and have them enter the number corresponding to their choice.
-- The app should work on Python 3.6+ installations.
-- App code must be well-formatted according to standardized guidelines.
-- App code should also be supported by concise, helpful comments that illustrate the flow of the program.
+- Handle common exceptions and errors gracefully, providing user-friendly error messages.
+- Connect to a locally hosted MySQL database.
+- Offer an intuitive interface with simple input forms and clear instructions, assuming users may not be technically proficient.
+- Ensure compatibility with Python 3.6+.
+- Maintain well-formatted code adhering to standardized guidelines.
+- Include concise, helpful comments to illustrate the program's flow.
 
 ## Nice to Have
-- Ideally, the application should be able to handle any kind of input from the user—assume that your user would enter random, nonsensical inputs (this concept is known as “monkey testing”).
-- Make an instruction manual! A simple, one-page document would do: it should describe the features of your application, as well as simple instructions that can take the user through your program. You can use the README file of your GitHub repository for hosting this instruction manual.
+- Robust input handling to manage unexpected or nonsensical user inputs, simulating "monkey testing" manually to test the application's limits.
 
-## Mockups or Other Assets
-All input and output for this app takes place from a command line, so there's a limited amount you can do in terms of presentation. Although you’re free to communicate in your own words for the interface, here is a general template that you can go through to build an approximate idea of your project. Once you’re comfortable coding in Python, we encourage you to delve further into making your app user-friendly.
+## Installation
 
-## Project Deliverables
-Throughout this Achievement, you’ll be working from one Exercise to the next to build on different aspects of your app. In the task at the end of each Exercise, you’ll submit a deliverable that adds one or more features to your app, each contributing to your final product—in this case, a Recipe app that stores and searches for recipes.
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/yourusername/recipe-app-cli.git
+   cd recipe-app-cli
+2. **Set up a virtual environment:**
+   ```sh
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. **Install dependencies:**
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. **Run the application:**
+   ```sh
+   python main.py
 
-### Exercise 1: Intro to Python Programming
-- Install Python on macOS, Windows, or Linux
-- Create and manage virtual environments
-- Use pip to install and manage packages
+## Usage
+1. **Activate the virtual environment:**
+   ```sh
+   source venv/bin/activate
+2. **Run the application:**
+   ```sh 
+   python main.py  
 
-### Exercise 2: Data Types in Python
-- Use data types and methods to execute Python commands that store recipes containing their own internal data
-- Enter a number of these recipes into another linear data structure
 
-### Exercise 3: Functions and Other Operations in Python
-- Create your first script on a .py script file
-- Build a script that uses if-elif-else statements, for loops, and functions to take recipes from the user then display them
+# Python Environment Setup Guide
 
-### Exercise 4: File Handling in Python
-- Create a Python script that takes recipes from the user and writes the data in a binary file
-- Create another script that reads the binary file and lists out the available ingredients. The user chooses an ingredient and the script displays all recipes which contain it
-- Use Python’s exception handling features to handle common errors
+## 1. Install Python
 
-### Exercise 5: Object-Oriented Programming in Python
-- Build a custom class for your recipes, which contains its own data attributes for name, ingredients, cooking time, and difficulty, as well as other custom methods to interact with this data
+### macOS
+1. **Install Homebrew** (if not already installed):
+   ```sh
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+### Install Python
+    ```sh
+    brew install python@3.12
+Windows
+1. Download Python Installer from the official Python website.
+2. Run the Installer:
+- Make sure to check the box "Add Python to PATH."
+- Select "Customize installation" and then "Install for all users."
+## 2. Install virtualenvwrapper
+### macOS and Linux
+1. Install virtualenvwrapper using pip (may need to use pip3 instead of pip):
+   ```sh
+    python3 -m pip install --user virtualenvwrapper
+2. Update .zshrc or .bashrc:
+   ```sh
+   # Set the directory for virtual environments
+    export WORKON_HOME=$HOME/.virtualenvs
 
-### Exercise 6: Connecting to Databases in Python
-- Set up a MySQL database and connect your scripts to it
-- Build an application that creates, reads, updates, and deletes recipes, as well as searching for them by a single ingredient
+    # Set the Python interpreter for virtualenvwrapper
+    export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 
-### Exercise 7: Finalizing Your Python Program
-- Use an Object Relational Mapper from SQLAlchemy to manage the contents of your database from your application
-- Build a user-friendly menu for entering and searching recipes and ingredients
-- Store recipe and ingredient data in a MySQL database
-- Implement recipe search according to user-defined ingredients
-- Implement a detailed display of the recipe selected by the user
+    # Source the virtualenvwrapper script
+    source $(which virtualenvwrapper.sh)
+3. Apply Changes:
+    ```sh
+   source ~/.zshrc  # or ~/.bashrc if using bash
+### Windows 
+1. Install virtualenvwrapper-win using pip: 
+   ```sh
+   python -m pip install virtualenvwrapper-win
+## 3. Create and Manage Virtual Environments
+### Create a New Virtual Environment
+    ```sh
+    mkvirtualenv cf-python-base
+### Activate a Virtual Environment
+    ```sh
+    workon cf-python-base
+### Deactivate a Virtual Environment
+    ```sh
+    deactivate
+### Create a New Virtual Environment of the Existing Virtual Environment
+    ```sh
+    mkvirtualenv cf-python-copy
+## 4. Install Packages & Export Requirements
+### Install iPython
+    ```sh
+    pip install ipython
+### Export Installed Packages to requirements.txt
+    ```sh
+    pip freeze > requirements.txt
+### Install Packages from requirements.txt in a New Environment
+1. Create and activate the new environment.
+2. Run: 
+    ```sh
+    pip install -r requirements.txt
+## 5. Using iPython Shell
+### Start iPython 
+1. Activate the virtual environment
+2. Run:
+    ```sh
+    ipython
+## 6. Troubleshooting
+### Common Errors
+- Error: externally-managed-environment
+    - Ensure you are in a virtual environment when installing packages.
+    - Use pip from within the activated virtual environment.
+- Error: ModuleNotFoundError
+    - Verify that the virtualenvwrapper package is installed and sourced correctly.
+- Error: ValueError: too many values to unpack (expected 3)
+    - Ensure the text file is in plain text format and correctly formatted.
+## 7. Additional Notes
+- Always activate the appropriate virtual environment before installing or managing packages.
+- Use pip freeze to track package dependencies and ensure consistent environments.
+- You may need to adjust or update any specifics relevant to your setup or use case!
 
-## Optional: Advanced Deliverables
-You can add as many features to your Recipe app as you like. The following two approaches, for example, can make your app more engaging for users:
-- Instead of the user selecting ingredients from a list for their recipe search, you could implement a search entry where the program searches for ingredients closest to the user’s search terms. For example, if a recipe contains “carrots”, but the user searches for “carrot”, your application would still bring up the relevant recipes.
-- You could also add more attributes to the Recipe class for expanded app functionality. For example: recipe instructions, or quantities for each ingredient.
+
+
+
