@@ -32,8 +32,8 @@ Users should be able to effortlessly create and modify recipes, including detail
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/recipe-app-cli.git
-   cd recipe-app-cli
+   git clone https://github.com/timone019/IntroToPython.git
+   cd IntroToPython
 2. **Set up a virtual environment:**
    ```sh
    python3 -m venv venv
@@ -138,7 +138,21 @@ Windows
 - Always activate the appropriate virtual environment before installing or managing packages.
 - Use pip freeze to track package dependencies and ensure consistent environments.
 - You may need to adjust or update any specifics relevant to your setup or use case!
+## Alternative Method for Creating a Virtual Environment in VS Code
+1. Open your project folder: In VS Code, open the folder that contains your project.
+   
+2. Open the Terminal: You can open the terminal by navigating to the menu bar and selecting Terminal > New Terminal.
+   
+3. Run the Script or Use Command Palette:
+- Run the Script: If you run a Python script and no virtual environment is detected, VS Code may prompt you to create one.
+  
+- Command Palette: Alternatively, you can open the Command Palette (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on macOS) and type Python: Create Environment.
+1. Select the Virtual Environment Type: VS Code will ask you to choose the type of environment to create (e.g., venv or virtualenv). Choose your preferred option.
+   
+2. Select the Python Interpreter: Choose the Python interpreter you want to use for the virtual environment. VS Code will automatically use the interpreter you select for the new environment.
+   
+3. Activate the Environment: Once the virtual environment is created, VS Code will automatically activate it in the terminal.
 
-
+Note: This is the VS Code User Interface Click & Point version of running mkvirtualenv i.e "newenv" or "venv"  
 
 
