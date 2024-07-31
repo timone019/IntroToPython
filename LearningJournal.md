@@ -113,3 +113,74 @@
        }
        
    ]
+
+### Exercise 1.3: Functions and Other Operations in Python
+
+## Learning Goals
+
+- Implement conditional statements in Python to determine program flow
+- Use loops to reduce time and effort in Python programming
+- Write functions to organize Python code
+
+## Reflection Questions
+
+### 1. Travel App Script
+
+In this exercise, you learned how to use `if-elif-else` statements to run different tasks based on conditions that you define. Now practice that skill by writing a script for a simple travel app using an `if-elif-else` statement for the following situation:
+
+- The script should ask the user where they want to travel.
+- The user’s input should be checked for 3 different travel destinations that you define.
+- If the user’s input is one of those 3 destinations, the following statement should be printed: “Enjoy your stay in ______!”
+- If the user’s input is something other than the defined destinations, the following statement should be printed: “Oops, that destination is not currently available.”
+
+Write your script here. (Hint: remember what you learned about indents!)
+
+```python
+def travel_app():
+    destination = input("Where would you like to travel? ")
+
+    if destination.lower() == "paris":
+        print("Enjoy your stay in Paris!")
+    elif destination.lower() == "tokyo":
+        print("Enjoy your stay in Tokyo!")
+    elif destination.lower() == "new york":
+        print("Enjoy your stay in New York!")
+    else:
+        print("Oops, that destination is not currently available.")
+
+travel_app()
+
+```
+
+### 2. Explaining Logical Operators in Python
+
+Imagine you’re at a job interview for a Python developer role. The interviewer says “Explain logical operators in Python”. Draft how you would respond.
+
+Logical operators in Python are used to combine conditional statements. The main logical operators are:
+
+- `and`: Returns True if both statements are true.
+- `or`: Returns True if at least one of the statements is true.
+- `not`: Reverses the result, returns False if the result is true.
+
+For example:
+
+```python
+a = True
+b = False
+
+print(a and b)  # Output: False
+print(a or b)   # Output: True
+print(not a)    # Output: False
+
+```
+### 3. What are functions in Python? When and why are they useful?
+Functions in Python are reusable blocks of code that perform a specific task. They are defined using the def keyword followed by a function name and parentheses containing any parameters. Functions are useful because they help organize code, make it more readable, and allow for code reuse. They also make debugging easier and help in breaking down complex problems into simpler, manageable pieces.
+
+### 4. Progress Towards Goals
+In the section for Exercise 1 in this Learning Journal, you were asked in question 3 to set some goals for yourself while you complete this course. In preparation for your next mentor call, make some notes on how you’ve progressed towards your goals so far.
+
+- Goal 1: Improve problem-solving skills: I've been practicing writing scripts and solving different coding problems, which has significantly improved my problem-solving abilities.
+
+- Goal 2: Learn Python syntax and best practices: By completing exercises and writing functions, I’ve become more familiar with Python syntax and better at writing clean, efficient code.
+
+- Goal 3: Build a project portfolio: I’ve started a few small projects, like a recipe app, and plan to expand them into a larger portfolio to showcase my skills.
