@@ -184,3 +184,54 @@ In the section for Exercise 1 in this Learning Journal, you were asked in questi
 - Goal 2: Learn Python syntax and best practices: By completing exercises and writing functions, I’ve become more familiar with Python syntax and better at writing clean, efficient code.
 
 - Goal 3: Build a project portfolio: I’ve started a few small projects, like a recipe app, and plan to expand them into a larger portfolio to showcase my skills.
+  
+### Exercise 1.4: File Handling in Python
+Learning Goals
+- Use files to store and retrieve data in Python
+
+###  Reflection Questions
+
+
+1. Why is file storage important when you’re using Python? What would happen if you didn’t store local files?
+
+- File storage is important in Python because it allows you to persist data between program executions. Without storing local files, any data generated or modified during a program's execution would be lost once the program terminates. This would make it impossible to maintain state or save progress, which is crucial for many applications such as databases, user settings, and logs.
+
+2. In this Exercise you learned about the pickling process with the pickle.dump() method. What are pickles? In which situations would you choose to use pickles and why?
+
+- Pickles are a way to serialize and deserialize Python objects, allowing them to be saved to a file and later loaded back into a program. The pickle.dump() method is used to serialize an object and write it to a file. Pickles are useful in situations where you need to save complex data structures like dictionaries, lists, or custom objects to a file and retrieve them later in the same state. This is particularly useful for caching, saving machine learning models, or any scenario where you need to save the state of an object.
+
+3. In Python, what function do you use to find out which directory you’re currently in? What if you wanted to change your current working directory?
+
+- To find out which directory you’re currently in, you can use the os.getcwd() function from the os module. To change your current working directory, you can use the os.chdir(path) function, where path is the directory you want to switch to.
+
+```python
+import os
+
+# Get current working directory
+current_directory = os.getcwd()
+print("Current Directory:", current_directory)
+
+# Change current working directory
+os.chdir('/path/to/new/directory')
+print("Directory changed to:", os.getcwd())
+```
+4. Imagine you’re working on a Python script and are worried there may be an error in a block of code. How would you approach the situation to prevent the entire script from terminating due to an error?
+
+- To prevent the entire script from terminating due to an error, you can use a try-except block to catch and handle exceptions. This allows you to manage errors gracefully and continue executing the rest of the script.
+
+```python
+try:
+    # Code that might raise an exception
+    risky_code()
+except Exception as e:
+    # Handle the exception
+    print(f"An error occurred: {e}")
+```
+5. You’re now more than halfway through Achievement 1! Take a moment to reflect on your learning in the course so far. How is it going? What’s something you’re proud of so far? Is there something you’re struggling with? What do you need more practice with? Feel free to use these notes to guide your next mentor call.
+
+Reflection:
+
+- How is it going? The course is going well, and I feel more confident in my Python skills.
+Something I'm proud of: I'm proud of my ability to handle file operations and understand the pickling process.
+- Something I'm struggling with: I sometimes struggle with debugging complex code and understanding error messages.
+- What I need more practice with: I need more practice with exception handling and working with different file formats
