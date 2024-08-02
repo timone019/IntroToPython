@@ -37,17 +37,42 @@ def take_recipe():
 
     return recipe
 
-def save_recipe(recipe, filename='recipes.bin'):
-    """
-    Save the recipe to a binary file.
-    """
+def main():
+    filename = input("Enter the filename to load recipes from (or save to): ")
+
     try:
-        with open(filename, 'ab') as file:
-            pickle.dump(recipe, file)
+        with open(filename, 'rb') as file:
+            data = pickle.load(file)
+    except FileNotFoundError:
+        print(f"File {filename} not found. Creating a new recipe list.")
+        data = {'recipes_list': [], 'all_ingredients': []}
     except Exception as e:
-        print(f"Error saving recipe: {e}")
+        print(f"An error occurred: {e}. Creating a new recipe list.")
+        data = {'recipes_list': [], 'all_ingredients': []}
+    else:
+        print(f"File {filename} loaded successfully.")
+    finally:
+        recipes_list = data.get('recipes_list', [])
+        all_ingredients = data.get('all_ingredients', [])
+
+    num_recipes = int(input("How many recipes would you like to enter? "))
+
+    for _ in range(num_recipes):
+        recipe = take_recipe()
+        recipes_list.append(recipe)
+
+        for ingredient in recipe['Ingredients']:
+            if ingredient not in all_ingredients:
+                all_ingredients.append(ingredient)
+
+    data = {
+        'recipes_list': recipes_list,
+        'all_ingredients': all_ingredients
+    }
+
+    with open(filename, 'wb') as file:
+        pickle.dump(data, file)
+        print(f"Data saved to {filename} successfully.")
 
 if __name__ == "__main__":
-    recipe = take_recipe()
-    save_recipe(recipe)
-    print("Recipe saved successfully!")
+    main()
