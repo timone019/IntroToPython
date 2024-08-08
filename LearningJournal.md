@@ -235,3 +235,61 @@ Reflection:
 Something I'm proud of: I'm proud of my ability to handle file operations and understand the pickling process.
 - Something I'm struggling with: I sometimes struggle with debugging complex code and understanding error messages.
 - What I need more practice with: I need more practice with exception handling and working with different file formats
+
+### Exercise 1.5: Object-Oriented Programming in Python
+
+Learning Goals
+- Apply object-oriented programming concepts to your Recipe app
+## Reflection Questions
+1. In your own words, what is object-oriented programming? What are the benefits of OOP?
+
+- Object-oriented programming (OOP) is a programming paradigm that organizes software design around objects, which can be thought of as instances of classes. Each object is capable of storing data (attributes) and performing actions (methods) related to that data. OOP allows for modeling real-world entities and interactions within a program by defining classes that serve as blueprints for creating objects.
+
+The benefits of OOP include:
+
+- Modularity: Code is organized into separate classes, making it easier to maintain and update.
+Reusability: Once a class is defined, it can be reused to create multiple objects, reducing redundancy.
+Abstraction: OOP allows for hiding the complex implementation details and exposing only the necessary components, simplifying interaction with the code.
+Encapsulation: OOP enables bundling data with methods that operate on that data, protecting the internal state of objects from unintended interference.
+Inheritance: It allows new classes to inherit properties and behavior from existing classes, promoting code reuse and a hierarchical class structure.
+Polymorphism: It provides the ability to define methods in different classes with the same name, allowing them to be used interchangeably based on the object type.
+2. What are objects and classes in Python? Come up with a real-world example to illustrate how objects and classes work.
+
+- In Python, a class is a blueprint for creating objects. A class defines attributes and methods that the created objects will have. An object, on the other hand, is an instance of a class, meaning it is a specific realization of the class with actual values assigned to its attributes.
+
+Real-world example:
+- Consider a Car as a class. The Car class might have attributes such as make, model, color, and year. It might also have methods such as start_engine(), stop_engine(), and drive(). An object is a specific car, like a Toyota Camry 2020 in Red. This object would have the make attribute set to "Toyota", model to "Camry", color to "Red", and year to "2020". The object can perform actions like starting the engine or driving, just as defined in the Car class.
+
+```python
+class Car:
+    def __init__(self, make, model, color, year):
+        self.make = make
+        self.model = model
+        self.color = color
+        self.year = year
+
+    def start_engine(self):
+        return "Engine started."
+
+    def stop_engine(self):
+        return "Engine stopped."
+
+# Creating an object of the Car class
+my_car = Car("Toyota", "Camry", "Red", 2020)
+
+# Accessing object methods
+print(my_car.start_engine())  # Output: Engine started.
+```
+
+3. In your own words, write brief explanations of the following OOP concepts; 100 to 200 words per method is fine.
+
+Inheritance
+- Inheritance is an OOP concept where a new class, known as a subclass, derives attributes and methods from an existing class, known as a superclass. This allows the subclass to inherit the behavior and characteristics of the superclass while also introducing new features or modifying existing ones. Inheritance promotes code reuse, as common functionality can be defined in a superclass and shared across multiple subclasses. For example, consider a superclass Animal with attributes like name and methods like speak(). A subclass Dog can inherit from Animal, automatically gaining the name attribute and speak() method, while also adding its unique method, such as fetch(). This hierarchical relationship simplifies code maintenance and enhances extensibility.
+
+Polymorphism
+- Polymorphism is an OOP concept that allows objects of different classes to be treated as objects of a common superclass. The key idea is that different classes can define methods with the same name, and the correct method will be called based on the object’s actual class at runtime. Polymorphism enables flexibility and makes code more generic and extensible. For instance, consider a method draw() that exists in both Circle and Square classes. Even though the method has the same name, the way each shape is drawn differs. Polymorphism allows the draw() method to be called on any object of type Shape (a common superclass), and the correct version of the method will execute, whether it's a Circle, Square, or any other shape.
+
+Operator Overloading
+- Operator overloading is a feature in OOP that allows predefined operators (like +, -, *, etc.) to have different meanings based on the context in which they are used. In Python, classes can overload operators by defining special methods (also known as magic methods) that begin with double underscores (__). 
+  
+- For example, the __add__ method can be defined within a class to customize how the + operator behaves when applied to objects of that class. This enables objects to be combined or compared in a way that is meaningful to their context. For example, in a Vector class, overloading the + operator allows two vector objects to be added together using v1 + v2, which might result in a new vector representing the sum of the two.

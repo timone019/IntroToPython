@@ -48,7 +48,7 @@ class Recipe:
 
     # Getter for difficulty
     def get_difficulty(self):
-        if self.difficulty is None:
+        if (self.difficulty is None):
             self.calculate_difficulty()
         return self.difficulty
 
@@ -73,39 +73,7 @@ class Recipe:
     def recipe_search(data, search_term):
         for recipe in data:
             if recipe.search_ingredient(search_term):
-                print(recipe)
-                
-                # Create a new recipe
-recipe = Recipe('Pasta Salad', 15)
-
-# Add ingredients to the recipe
-recipe.add_ingredients('Pasta', 'Tomatoes', 'Olives', 'Feta')
-
-# Print the recipe details
-print(recipe)
-
-# Check if an ingredient is in the recipe
-print(recipe.search_ingredient('Pasta'))  # Output: True
-print(recipe.search_ingredient('Cheese'))  # Output: False
-
-# Get the list of all unique ingredients across recipes
-print(Recipe.all_ingredients)  # Output: {'Pasta', 'Tomatoes', 'Olives', 'Feta'}
-                
-# Example Usage
-recipe1 = Recipe('Pasta Salad', 15)
-recipe1.add_ingredients('Pasta', 'Tomatoes', 'Olives', 'Feta')
-
-recipe2 = Recipe('Fruit Salad', 5)
-recipe2.add_ingredients('Apples', 'Bananas', 'Oranges')
-
-recipe3 = Recipe('Omelette', 10)
-recipe3.add_ingredients('Eggs', 'Milk', 'Salt', 'Pepper')
-
-# List of recipes
-recipes = [recipe1, recipe2, recipe3]
-
-# Search for recipes containing 'Tomatoes'
-Recipe.recipe_search(recipes, 'Tomatoes')
+                print("\n" + str(recipe))  # Add a newline before each recipe for better visibility
 
 # Create the 'tea' recipe
 tea = Recipe('Tea', 5)
@@ -137,7 +105,7 @@ Recipe.recipe_search(recipes_list, 'Water')
 print()
 
 # Search for recipes containing 'Sugar'
-print("Recipes containing 'Sugar':")
+print("\nRecipes containing 'Sugar':\n")
 Recipe.recipe_search(recipes_list, 'Sugar')
 print()
 
@@ -145,5 +113,3 @@ print()
 print("Recipes containing 'Bananas':")
 Recipe.recipe_search(recipes_list, 'Bananas')
 print()
-
-
