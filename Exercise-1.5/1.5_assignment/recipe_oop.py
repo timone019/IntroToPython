@@ -107,31 +107,43 @@ recipes = [recipe1, recipe2, recipe3]
 # Search for recipes containing 'Tomatoes'
 Recipe.recipe_search(recipes, 'Tomatoes')
 
-# Create an object named 'tea' under the Recipe class
-tea = Recipe('Tea', 5)
-
-# Add ingredients to the 'tea' recipe
-tea.add_ingredients('Tea Leaves', 'Sugar', 'Water')
-
-# Display the string representation of the 'tea' object
-print(tea)
-
 # Create the 'tea' recipe
 tea = Recipe('Tea', 5)
 tea.add_ingredients('Tea Leaves', 'Sugar', 'Water')
-print(tea)
 
 # Create the 'coffee' recipe
 coffee = Recipe('Coffee', 5)
 coffee.add_ingredients('Coffee Powder', 'Sugar', 'Water')
-print(coffee)
 
 # Create the 'cake' recipe
 cake = Recipe('Cake', 50)
 cake.add_ingredients('Sugar', 'Butter', 'Eggs', 'Vanilla Essence', 'Flour', 'Baking Powder', 'Milk')
-print(cake)
 
 # Create the 'banana smoothie' recipe
 banana_smoothie = Recipe('Banana Smoothie', 5)
 banana_smoothie.add_ingredients('Bananas', 'Milk', 'Peanut Butter', 'Sugar', 'Ice Cubes')
-print(banana_smoothie)
+
+# Wrap the recipes into a list called 'recipes_list'
+recipes_list = [tea, coffee, cake, banana_smoothie]
+
+# Print each recipe in the list
+for recipe in recipes_list:
+    print(recipe)
+    print()  # Add a newline for better readability
+
+# Search for recipes containing 'Water'
+print("Recipes containing 'Water':")
+Recipe.recipe_search(recipes_list, 'Water')
+print()
+
+# Search for recipes containing 'Sugar'
+print("Recipes containing 'Sugar':")
+Recipe.recipe_search(recipes_list, 'Sugar')
+print()
+
+# Search for recipes containing 'Bananas'
+print("Recipes containing 'Bananas':")
+Recipe.recipe_search(recipes_list, 'Bananas')
+print()
+
+
