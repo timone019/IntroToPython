@@ -94,4 +94,50 @@ if __name__ == "__main__":
 
     # Call the main menu
     main_menu(conn, cursor)
+    
+def calculate_difficulty(cooking_time, ingredients):
+    # Calculate difficulty based on cooking_time and number of ingredients
+    if cooking_time < 10 and len(ingredients) < 4:
+        difficulty = "Easy"
+    elif cooking_time < 10 and len(ingredients) >= 4:
+        difficulty = "Medium"
+    elif cooking_time >= 10 and len(ingredients) < 4:
+        difficulty = "Intermediate"
+    else:
+        difficulty = "Hard"
+    
+    return difficulty
+
+def create_recipe(conn, cursor):
+    # Collect recipe details
+    name = input("Enter the recipe name: ")
+    cooking_time = int(input("Enter the cooking time in minutes: "))
+
+    ingredients = []
+    while True:
+        ingredient = input("Enter an ingredient (or 'done' to finish): ")
+        if ingredient.lower() == 'done':
+            break
+        ingredients.append(ingredient)
+
+    # Calculate difficulty
+    difficulty = calculate_difficulty(cooking_time, ingredients)
+
+    # Convert ingredients list to a comma-separated string
+    ingredients_str = ", ".join(ingredients)
+
+    # Prepare SQL query
+    query = """
+    INSERT INTO Recipes (name, ingredients, cooking_time, difficulty)
+    VALUES (%s, %s, %s, %s)
+    """
+    values = (name, ingredients_str, cooking_time, difficulty)
+
+    # Execute query and commit changes
+    cursor.execute(query, values)
+    conn.commit()
+
+    print("Recipe added successfully!")
+
+
 
