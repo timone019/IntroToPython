@@ -76,7 +76,7 @@ session = Session()
 # Function 1: create_recipe
 def create_recipe():
     name = input("Enter the recipe name (max 50 characters): ")
-    if len(name) > 50 or not name.isalnum():
+    if len(name) > 50 or not all(char.isalnum() or char.isspace() for char in name):
         print("Invalid recipe name!")
         return
     
@@ -175,7 +175,7 @@ def edit_recipe():
     
     if attribute_to_edit == "1":
         new_name = input("Enter the new recipe name (max 50 characters): ")
-        if len(new_name) > 50 or not new_name.isalnum():
+        if len(new_name) > 50 or not all(char.isalnum() or char.isspace() for char in new_name):
             print("Invalid recipe name!")
             return
         recipe_to_edit.name = new_name
