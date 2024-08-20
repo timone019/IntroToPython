@@ -339,3 +339,48 @@ SQLite would be a better choice than MySQL in situations where:
 - Mobile Development: Python is not as popular or well-supported for mobile app development compared to languages like Swift or Kotlin.
 - Concurrency: Python's Global Interpreter Lock (GIL) can be a limitation for multi-threaded applications, affecting performance in CPU-bound tasks.
 - Memory Consumption: Python can consume more memory compared to some other languages, which might be a concern for memory-constrained environments.
+
+# Exercise 1.7: Finalizing Your Python Program
+
+## Learning Goals
+- Interact with a database using an object-relational mapper (ORM)
+- Build your final command-line Recipe application
+
+## Reflection Questions
+
+### 1. What is an Object Relational Mapper and what are the advantages of using one?
+
+An **Object Relational Mapper (ORM)** is a tool that allows developers to interact with a database using the object-oriented paradigm of their programming language, rather than writing raw SQL queries. 
+
+**Advantages of using an ORM:**
+- **Abstraction**: ORMs abstract away the complexity of SQL, allowing developers to perform database operations using the programming language they are comfortable with.
+- **Maintainability**: Code is generally more maintainable and readable when using an ORM because it reduces the amount of SQL code scattered throughout the application.
+- **Security**: ORMs often provide protection against SQL injection attacks by using parameterized queries.
+- **Portability**: ORMs can make switching between different database systems easier, as the ORM handles differences in SQL dialects.
+
+### 2. By this point, you’ve finished creating your Recipe app. How did it go? What’s something in the app that you did well with? If you were to start over, what’s something about your app that you would change or improve?
+
+The creation of the Recipe app went smoothly overall. One aspect I did well with was the organization of the code and the implementation of functions that performed specific tasks, keeping the app modular and easy to maintain. 
+
+If I were to start over, I would focus on improving the user experience by adding more input validation and error handling. Additionally, I would consider implementing a feature for categorizing recipes, which could help in better organizing and searching for recipes.
+
+### 3. Imagine you’re at a job interview. You’re asked what experience you have creating an app using Python. Taking your work for this Achievement as an example, draft how you would respond to this question.
+
+In my recent project, I developed a command-line Recipe application using Python and SQLAlchemy, an Object Relational Mapper (ORM). The app allows users to create, view, search, edit, and delete recipes stored in a MySQL database. I used SQLAlchemy to define models, manage database connections, and perform CRUD operations efficiently. Throughout the project, I focused on ensuring the app was user-friendly by implementing input validation and clear user prompts. This project helped me solidify my understanding of database interactions in Python, and I’m confident in my ability to build similar applications.
+
+### 4. You’ve finished Achievement 1! Before moving on to Achievement 2, take a moment to reflect on your learning in the course so far: 
+
+#### a. What went well during this Achievement? 
+One thing that went well was my ability to integrate Python with a MySQL database using SQLAlchemy. I successfully implemented various functions to handle different user operations, which helped me understand the flow of data between the application and the database.
+
+#### b. What’s something you’re proud of? 
+I’m proud of how I structured the application and the clarity of the code. Additionally, the fact that I was able to implement a robust search function based on user-selected ingredients is something I take pride in.
+
+#### c. What was the most challenging aspect of this Achievement? 
+The most challenging aspect was ensuring that the application handled various edge cases, such as invalid user inputs and database errors. I had to spend extra time refining my error handling to ensure the app behaved correctly in all scenarios.
+
+#### d. Did this Achievement meet your expectations? Did it give you the confidence to start working with your new Python skills?
+Yes, this Achievement met my expectations. It gave me hands-on experience with Python and databases, which boosted my confidence in applying these skills to real-world projects.
+
+#### e. What’s something you want to keep in mind to help you do your best in Achievement 2?
+I want to keep in mind the importance of planning and designing the application before diving into the code. A well-thought-out plan can save time and prevent issues later in the development process.
