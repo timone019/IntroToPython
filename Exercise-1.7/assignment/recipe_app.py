@@ -226,19 +226,35 @@ def delete_recipe():
         print("Delete operation canceled.")
             
                     
-# Example usage:
-# Add a new recipe
-# new_recipe = Recipe(name="Pasta", ingredients="Pasta, Tomato Sauce, Cheese", cooking_time=15)
-# new_recipe.calculate_difficulty()
+def main_menu():
+    while True:
+        print("\nMain Menu:")
+        print("1. Create a new recipe")
+        print("2. View all recipes")
+        print("3. Search for recipes by ingredients")
+        print("4. Edit a recipe")
+        print("5. Delete a recipe")
+        print("Type 'quit' to exit the application")
 
-# Add the recipe to the session and commit
-# session.add(new_recipe)
-# session.commit()
+        user_choice = input("\nPlease choose an option (1-5) or type 'quit': ").strip().lower()
 
-# Query and display all recipes
-recipes = session.query(Recipe).all()
-for recipe in recipes:
-    print(recipe)
+        if user_choice == '1':
+            create_recipe()  # Call the function to create a new recipe
+        elif user_choice == '2':
+            view_all_recipes()  # Call the function to view all recipes
+        elif user_choice == '3':
+            search_by_ingredients()  # Call the function to search for recipes by ingredients
+        elif user_choice == '4':
+            edit_recipe()  # Call the function to edit a recipe
+        elif user_choice == '5':
+            delete_recipe()  # Call the function to delete a recipe
+        elif user_choice == 'quit':
+            print("Exiting the application...")
+            session.close()  # Close the session
+            engine.dispose()  # Close the engine connection
+            break  # Exit the loop and end the program
+        else:
+            print("\nInvalid input. Please choose a valid option.")
 
-# Closing the session
-session.close()
+# Start the main menu
+main_menu()
