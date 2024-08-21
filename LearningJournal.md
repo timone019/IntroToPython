@@ -384,3 +384,45 @@ Yes, this Achievement met my expectations. It gave me hands-on experience with P
 
 #### e. What’s something you want to keep in mind to help you do your best in Achievement 2?
 I want to keep in mind the importance of planning and designing the application before diving into the code. A well-thought-out plan can save time and prevent issues later in the development process.
+
+### Reflection Questions for Exercise 2.1: Getting Started with Django
+
+#### 1. Suppose you’re a web developer in a company and need to decide if you’ll use vanilla (plain) Python for a project, or a framework like Django instead. What are the advantages and drawbacks of each?
+
+**Vanilla Python:**
+- **Advantages:**
+  - **Flexibility:** Offers complete control over every aspect of the project without being bound by the constraints of a framework.
+  - **Lightweight:** No overhead of additional libraries or frameworks, which can result in better performance for simple projects.
+  - **Learning Opportunity:** Provides a deep understanding of how things work under the hood, such as request handling and database interaction.
+  
+- **Drawbacks:**
+  - **Development Speed:** Building web applications from scratch with vanilla Python can be time-consuming, especially when implementing common features like authentication, routing, and database management.
+  - **Reinventing the Wheel:** You may need to write a lot of boilerplate code for basic functionalities that are readily available in frameworks like Django.
+  - **Security Concerns:** Managing security features (e.g., CSRF protection, SQL injection prevention) manually can be error-prone.
+
+**Django:**
+- **Advantages:**
+  - **Rapid Development:** Django provides a lot of built-in features like an admin interface, authentication system, and ORM, which speeds up development significantly.
+  - **Scalability:** Django’s structure and best practices promote scalable code, making it easier to maintain and expand the project as it grows.
+  - **Security:** Django comes with built-in security features like CSRF protection, SQL injection prevention, and XSS protection.
+  - **Community Support:** Django has a large community, extensive documentation, and a plethora of third-party packages that can be integrated into your project.
+
+- **Drawbacks:**
+  - **Learning Curve:** While Django is powerful, it can be complex for beginners, especially if they are unfamiliar with frameworks.
+  - **Overhead:** For small projects, Django might be overkill, adding unnecessary complexity and performance overhead.
+  - **Less Flexibility:** Django enforces a certain way of doing things, which can be restrictive if you need more control over certain aspects of your application.
+
+#### 2. In your own words, what is the most significant advantage of Model View Template (MVT) architecture over Model View Controller (MVC) architecture?
+
+The most significant advantage of the Model View Template (MVT) architecture over the Model View Controller (MVC) architecture is the **separation of concerns** with a simplified structure. In MVT, the "Template" component handles both the view and presentation logic, making it easier to maintain and organize code, especially when building complex web applications. This separation reduces redundancy and keeps the logic and presentation layers distinct, resulting in more maintainable and cleaner code. MVT also aligns closely with how web development works in practice, as the template directly interacts with the data and presentation, reducing the need for extra layers of abstraction like in MVC.
+
+#### 3. Now that you’ve had an introduction to the Django framework, write down three goals you have for yourself and your learning process during this Achievement.
+
+1. **Deepen Understanding of Django’s Core Features:**
+   - I want to gain a solid understanding of Django’s core features, including the ORM, URL routing, and template engine. Mastering these aspects will help me build robust web applications quickly and efficiently.
+
+2. **Build a Real-World Project:**
+   - My goal is to create a functional web application using Django that incorporates user authentication, data management, and a polished front-end interface. This project will serve as a portfolio piece and help solidify my learning.
+
+3. **Prepare for Professional Opportunities:**
+   - After completing this Achievement, I want to feel confident enough to apply for positions or freelance work involving Django. I aim to be able to discuss Django’s benefits, best practices, and how to integrate it with other technologies in a professional setting.
