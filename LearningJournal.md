@@ -385,7 +385,7 @@ Yes, this Achievement met my expectations. It gave me hands-on experience with P
 #### e. What’s something you want to keep in mind to help you do your best in Achievement 2?
 I want to keep in mind the importance of planning and designing the application before diving into the code. A well-thought-out plan can save time and prevent issues later in the development process.
 
-### Reflection Questions for Exercise 2.1: Getting Started with Django
+# Reflection Questions for Exercise 2.1: Getting Started with Django
 
 #### 1. Suppose you’re a web developer in a company and need to decide if you’ll use vanilla (plain) Python for a project, or a framework like Django instead. What are the advantages and drawbacks of each?
 
